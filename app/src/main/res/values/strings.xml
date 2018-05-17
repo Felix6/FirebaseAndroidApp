@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Lab_GoogleFirebaseActivity</string>
+    <string name="app_name">Firebase</string>
 
     <string name="lbl_id">Id Number:</string>
     <string name="lbl_band">Band Name:</string>
@@ -41,6 +41,8 @@
     <string name="msg_database_last">Último Registro</string>
     <string name="msg_record_db_error">Registro No Encontrado</string>
     <string name="hint_Album">Enter Album Name</string>
+    <string name="ToastMessage">Click Me!</string>
+    <string name="about_me">About Me</string>
 
 
 </resources>

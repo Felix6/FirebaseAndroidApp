@@ -1,18 +1,5 @@
 package com.example.felix.lab_googlefirebaseactivity;
 
-/**
- * En el proyecto falta cambiar el band de las variables
- *  y agregar los edit text con sus labels
- *  xavier envio un video de como hacer un spinner
- *  el spinner usalo para la seleccion de generos musicales
- *  tambien tienes agregar el splash screen
- *  agregar un boton de menu (los 3 puntitos)
- *  agregar una pagina de "about me" y un toast button
- */
-
-
-
-
 import android.graphics.ColorFilter;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -21,10 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -67,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
         editTextId = findViewById(R.id.editTextId);
         editTextBand = findViewById(R.id.editTextBand);
         editTextAlbum = findViewById(R.id.editTextAlbum);
@@ -74,6 +68,27 @@ public class MainActivity extends AppCompatActivity {
         editTextGenre = findViewById(R.id.editTextGenre);
         imageBtnFind = findViewById(R.id.imageBtnFind);
         setFieldsValues();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mMenuInflater = getMenuInflater();
+        mMenuInflater.inflate(R.menu.my_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_toast){
+            Toast.makeText(MainActivity.this,
+                    "Android Programming is Cool!",
+                    Toast.LENGTH_SHORT).show();
+        }
+        if (item.getItemId() == R.id.action_about){
+            Toast.makeText(MainActivity.this,
+                    "App Developed by:\n Felix M. Colon\n Y00-44-1204", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setFieldsValues() {

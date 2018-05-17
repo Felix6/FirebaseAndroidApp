@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about_me"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_toast"
+        android:title="@string/ToastMessage"
+        app:showAsAction="ifRoom" />
+</menu>
