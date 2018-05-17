@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dip"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_id"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_id"
+        android:inputType="textPersonName"
+        android:maxLength="5"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_band"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextBand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_band"
+        android:inputType="textCapWords|textPersonName"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_Genre"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+<!--    <Spinner
+        android:id="@+id/spinnerGenre"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="310dp"
+        android:text="@+id/spinner">
+
+    </Spinner>
+-->
+    <EditText
+        android:id="@+id/editTextGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_Genre"
+        android:inputType="text"
+        android:maxLength="13"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_Album"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_Album"
+        android:inputType="text"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_Label"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_Label"
+        android:inputType="text"
+        android:textColor="@android:color/black" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_weight="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <ImageButton
+                android:id="@+id/imageBtnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:elevation="12dp"
+                android:onClick="insertDatabaseRecord"
+                android:tooltipText="@string/hint_btn_add"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <ImageButton
+                android:id="@+id/imageBtnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageBtnAdd"
+                android:layout_toEndOf="@+id/imageBtnAdd"
+                android:elevation="12dp"
+                android:onClick="deleteDatabaseRecord"
+                android:tooltipText="@string/hint_btn_del"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/imageBtnModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageBtnDelete"
+                android:layout_toEndOf="@+id/imageBtnDelete"
+                android:elevation="12dp"
+                android:onClick="updateDatabaseRecord"
+                android:tooltipText="@string/hint_btn_mod"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+            <ImageButton
+                android:id="@+id/imageBtnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageBtnModify"
+                android:layout_toEndOf="@+id/imageBtnModify"
+                android:elevation="12dp"
+                android:onClick="prevoiusDatabaseRecord"
+                android:tooltipText="@string/hint_btn_prev"
+                app:srcCompat="@android:drawable/ic_media_previous" />
+
+            <ImageButton
+                android:id="@+id/imageBtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageBtnPrevious"
+                android:layout_toEndOf="@+id/imageBtnPrevious"
+                android:elevation="12dp"
+                android:onClick="nextDatabaseRecord"
+                android:tooltipText="@string/hint_btn_next"
+                app:srcCompat="@android:drawable/ic_media_next" />
+
+            <ImageButton
+                android:id="@+id/imageBtnFind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageBtnNext"
+                android:layout_toEndOf="@+id/imageBtnNext"
+                android:elevation="12dp"
+                android:onClick="selectDatabaseRecord"
+                android:tooltipText="@string/hint_btn_find"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frameLayout"
+        android:layout_weight="2"
+        android:baselineAlignBottom="false"
+        android:elevation="12dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/image_background" />
+
+</LinearLayout>
+

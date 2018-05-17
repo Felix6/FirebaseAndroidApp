@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name">Lab_GoogleFirebaseActivity</string>
+
+    <string name="lbl_id">Id Number:</string>
+    <string name="lbl_band">Band Name:</string>
+    <string name="lbl_Genre">Genre:</string>
+    <string name="lbl_Album">Album Name:</string>
+    <string name="lbl_Label">Label:</string>
+
+    <string-array name="genre">
+        <item>Rock</item>
+        <item>Metal</item>
+        <item>Reggae</item>
+        <item>Rock Latino</item>
+    </string-array>
+
+
+    <string name="hint_id">Enter Id:</string>
+    <string name="hint_band">Enter band name:</string>
+    <string name="hint_Genre">Pick Genre:</string>
+    <string name="hint_Label">Enter Label</string>
+
+    <string name="hint_btn_add">Insertar Registro</string>
+    <string name="hint_btn_mod">Actualizar Registro</string>
+    <string name="hint_btn_del">Borrar Registro</string>
+    <string name="hint_btn_next">Próximo Registro</string>
+    <string name="hint_btn_prev">Registro Anterior</string>
+    <string name="hint_btn_find">Buscar Registro</string>
+
+    <string name="msg_error_xml">Error en XML</string>
+    <string name="msg_error_db">Error en Base de Datos</string>
+    <string name="msg_error_field">Error: Dato Requerido</string>
+    <string name="msg_database_add">Registro Creado</string>
+    <string name="msg_database_mod">Registro Actualizado</string>
+    <string name="msg_database_del">Registro Borrado</string>
+    <string name="msg_database_next">Registro Próximo</string>
+    <string name="msg_database_prev">Registro Anterior</string>
+    <string name="msg_database_find">Registro Encontrado</string>
+    <string name="msg_database_first">Primer Registro</string>
+    <string name="msg_database_last">Último Registro</string>
+    <string name="msg_record_db_error">Registro No Encontrado</string>
+    <string name="hint_Album">Enter Album Name</string>
+
+
+</resources>
